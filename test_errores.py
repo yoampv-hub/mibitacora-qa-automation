@@ -5,6 +5,9 @@ from selenium.webdriver.common.by import By
 # cargamos los secretos 
 load_dotenv ()
 
+@pytest.mark.skip(reason="Fallo intencional omitido en la nube")
+
+
 def test_falla_a_proposito_con_captura (browser):
 
     browser.get(os.getenv("SAUCE_URL"))
