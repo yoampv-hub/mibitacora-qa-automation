@@ -22,10 +22,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: 4. Ejecutar pruebas con Pytest
+    - name: 4. Ejecutar todas las pruebas con Pytest
       env:
+        # Secretos de SauceDemo
         SAUCE_URL: ${{ secrets.SAUCE_URL }}
         SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
         SAUCE_PASSWORD: ${{ secrets.SAUCE_PASSWORD }}
+        # Secretos de tu App Real
+        APP_URL: ${{ secrets.APP_URL }}
+        APP_MANAGER_EMAIL: ${{ secrets.APP_MANAGER_EMAIL }}
+        APP_MANAGER_PASSWORD: ${{ secrets.APP_MANAGER_PASSWORD }}
       run: |
         pytest -v
