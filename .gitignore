@@ -1,6 +1,15 @@
+# Entornos y secretos
 venv/
 .env
+
+# Caché de Python
 __pycache__/
 .pytest_cache/
-*.png
-*.html
+
+# Artefactos de pruebas (Mejor en carpetas que extensiones sueltas)
+screenshots/
+reports/
+*.log
+
+# Archivos del sistema (macOS)
+.DS_Store
